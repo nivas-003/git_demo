@@ -1,0 +1,22 @@
+.profile-role{
+    font-style: italic;
+}
+
+.header{
+    align-items: center;
+}
+
+img{
+    border-radius: 50%;
+    box-shadow: 0 2px 5px white; 
+}
+
+.header, .main-content{
+    margin: 20px;
+    border: 10px black
+}
+
+.box{
+    border: 2px solid black;
+    border-collapse: collapse;
+}

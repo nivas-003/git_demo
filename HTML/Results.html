@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title> form-results </title>
+</head>
+
+<body>
+Results!!
+
+<div id="results">
+
+    <script>
+        const rl = document.getElementById('results')
+        new URLSearchParams(window.location.search).forEach((value,name) => {
+            rl.append(`${name}: ${value}`)
+             rl.append(document.createElement('br'))
+        })
+    </script>
+
+</div>
+
+</body>
+
+</html>	
