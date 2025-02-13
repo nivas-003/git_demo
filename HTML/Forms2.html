@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> Forms_page_2 </title>
+</head>
+
+<body>
+Hello, Team!!
+
+<form>
+    <label>Name:</label>
+    <input name="name" id="name" type="text">
+    <input type="submit" onclick="getNameValue()">
+</form>
+
+<script>
+function getNameValue(){
+    var result = document.getElementById("name").value
+    console.log(result)
+    alert("Name entered successfully!!")
+}
+</script>
+
+</body>
+</html>
