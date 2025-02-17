@@ -1,0 +1,235 @@
+{
+  // Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+
+  "type-attr": {
+    "prefix": "tx",
+    "body": "type=\"${1:-}\"$0"
+  },
+
+  "cdn-react" : {
+    "description": "React cdn",
+    "prefix": ["cdn-react"],
+    "body": [
+      "<script src=\"https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js\"></script>",
+      "<script src=\"https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js\"></script>",
+      "$0"
+      ]
+  },
+  "cdn-bootstrap-css": {
+    "description": "Bootstrap CSS cdn",
+    "prefix": "cdn-bs-css",
+    "body": "<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">"
+  },
+  "cdn-bootstrap-js": {
+    "description": "Bootstrap cdn",
+    "prefix": "cdn-bs-js",
+    "body": "<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\"></script>"
+  },
+  "cdn-babel": {
+    "description": "Babel cdn",
+    "prefix": "cdn-babel",
+    "body": "<script src=\"https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js\"></script>"
+  },
+  "cdn-react-babel" : {
+    "description": "React cdn",
+    "prefix": ["cdn-react-babel"],
+    "body": [
+      "<script src=\"https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js\"></script>",
+      "<script src=\"https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js\"></script>",
+      "<script src=\"https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js\"></script>",
+      "$0"
+      ]
+  },
+  "cdn-react-router" : {
+    "description": "ReactRouter cdn",
+    "prefix": ["cdn-react-router"],
+    "body": [
+      "<script src=\"https://cdn.jsdelivr.net/npm/react-router-dom/dist/umd/react-router-dom.production.min.js\"></script>",
+      "$0"
+      ]
+  },
+  "cdn-react-jquery" : {
+    "description": "React+jQuery cdn",
+    "prefix": ["cdn-react-jquery"],
+    "body": [
+      "<script src=\"https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js\"></script>",
+      "<script src=\"https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js\"></script>",
+      "<script src=\"https://cdn.jsdelivr.net/npm/react-router-dom/dist/umd/react-router-dom.production.min.js\"></script>",
+      "<script src=\"https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js\"></script>",
+      "<script src=\"https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js\"></script>$0"
+      ]
+  },
+  "cdn-jquery" : {
+    "description": "jQuery cdn",
+    "prefix": ["cdn-jquery"],
+    "body": [
+      "<script src=\"https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js\"></script>$0"
+      ]
+  },
+  "cdn-handlebars" : {
+    "description": "Handlebars cdn",
+    "prefix": ["cdn-handlebars"],
+    "body": [
+      "<script src=\"https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js\"></script>$0"
+      ]
+  },
+  "cdn-ko" : {
+    "description": "Knockout(ko) cdn",
+    "prefix": ["cdn-knockout"],
+    "body": [
+      "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js\"></script>$0"
+      ]
+  },
+
+  "cdn-pug" : {
+    "description": "Pug(Jade) js",
+    "prefix": ["cdn-pug"],
+    "body": [
+      "<script src=\"https://pugjs.org/js/pug.js\"></script>",
+      "<script>window.pug=require('pug');</script>$0"
+      ]
+  },
+
+  "cdn-axios": {
+    "description": "AXIOS cdn",
+    "prefix": "cdn-axios",
+    "body": "<script src=\"https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js\"></script>"
+  },
+
+  "cdn-require": {
+    "description": "requirejs cdn",
+    "prefix": "cdn-require",
+    "body": "<script src=\"https://cdn.jsdelivr.net/npm/requirejs@latest/require.min.js\"></script>"
+  },
+
+  "script-src": {
+    "prefix": ["scrsrc"],
+    "body": "<script src=\"$1\"></script>$0"
+  },
+
+  "script-type": {
+    "prefix": ["scrtyp"],
+    "body": "<script type=\"${1|module,text/jsx,text/babel|}\"$2>$3</script>$0"
+  },
+
+  "html-doctype": {
+    "prefix": ["!doc"],
+    "body": "<!DOCTYPE html>$0"
+  },
+
+  "html-head-body": {
+    "prefix": "!html",
+    "body": [
+              "<!DOCTYPE html>"
+            , "<html>"
+            , "<head>"
+            , "\t$0"
+            , "</head>"
+            , "<body>"
+            , "</body>"
+            , "</html>"
+    ]
+  },
+  "meta-utf": {
+    "prefix": ["meta-utf", ":utf"],
+    "body": "<meta charset=\"utf-8\" />"
+  },
+
+  "html5": {
+    "prefix": ["!!", "html5"],
+    "body": [ "<!DOCTYPE html>\n<html lang=\"en\">\n<head>"
+            , "\t<meta charset=\"UTF-8\" />"
+            , "\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />"
+            , "\t<link rel=\"icon\" href=\"data:image/x-icon;base64,\" />"
+            , "\t<title>${1:Title}</title>"
+            , "</head>\n<body>\n\t$0\n</body>\n</html>" ]
+  },
+
+  "meta-seo" : {
+    "prefix": ["meta:seo", ":seo"],
+    "body": [
+      "<meta name=\"robots\" content=\"index,follow\" />",
+      "<meta name=\"keywords\" content=\"${1}\" />",
+      "<meta name=\"description\" content=\"${2}\" />$0"],
+    "description": "meta tags for SEO"
+  },
+  "meta-no-cache" : {
+    "prefix": ["meta:cache", ":cache"],
+    "body": [
+      "<meta http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\" />",
+      "<meta http-equiv=\"Pragma\" content=\"no-cache\" />",
+      "<meta http-equiv=\"Expires\" content=\"0\" />$0"],
+    "description": "meta tags for no-cache"
+  },
+
+  "fav-emoji" : {
+    "prefix": ["fav:emoji", ":femoji"],
+    "body": "<link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>%3Ctext y=%22.9em%22 font-size=%2290%22%3E${1:🦜}%3C/text%3E%3C/svg%3E\">$0",
+    "description": "meta tags for fav-emoji-icon"
+  },
+  "fav-icon" : {
+    "prefix": ["fav:icon", ":ficon"],
+    "body": "<link rel=\"icon\" type=\"image/${1:png}\" href=\"${2:favicon.png}\" />$0",
+    "description": "meta tags for fav-icon"
+  },
+  "fav-base64": {
+    "prefix": ["fav:base64", ":fico64"],
+    "body": "<link rel=\"icon\" href=\"data:image/x-icon;base64,\" />$0"
+  },
+
+  "a-rel" : {
+    "prefix": "a:rel",
+    "body" : "rel=\"noopener noreferrer\"",
+    "description": "a[rel]"
+  },
+  "a-target-blank" : {
+    "prefix": ["target:blank", "a:target", ":blank"],
+    "body" : "target=\"_blank\" rel=\"noopener noreferrer\"",
+    "description": "a[target][rel]"
+  },
+
+  "<br/>" : {
+    "prefix": ["/br"],
+    "body" : "<br/>"
+  },
+  "<hr/>" : {
+    "prefix": ["/hr"],
+    "body" : "<hr/>"
+  },
+  "<input/>" : {
+    "prefix": ["/input",":input"],
+    "body" : "<input type=\"${1|text,button,checkbox,color,date,datetime-local,email,file,hidden,image,month,number,password,radio,range,reset,search,submit,tel,time,url,week|}\" $2/>$0"
+  },
+  "<form>": {
+    "prefix": "form",
+    "body": [
+        "<form>"
+      , "\t$0"
+      , "</form>"]
+  },
+
+  "Comment" : {
+    "prefix": ["//"],
+    "body" : "<!-- $0 -->",
+    "description": "Comment"
+  },
+  "TODO:" : {
+    "prefix": ["/todo", "//todo"],
+    "body" : "<!-- ${1|TODO,BUG,CHECK,DONE,INFO,KR,NOTE,REVIEW|}: $0 -->",
+    "description": "TODO: ..."
+  }
+
+
+}
