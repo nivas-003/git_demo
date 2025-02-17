@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> AC02-Profile-Nivas </title>
+</head>
+
+<body>
+    <h1>Hello, Team!!</h1>
+    <h3>This is a basic calculator... </h3>
+
+    <label>Enter Number A: </label>
+    <input type="number" id="numA">
+    <br>
+
+    <label>Enter Number B: </label>
+    <input type="number" id="numB">
+    <br>
+
+    <label>Operation: </label>
+    <select id="operation">
+        <option value="default">Choose an operation</option>
+        <option value="add">Addition (+)</option>
+        <option value="subtract">Subtraction (-)</option>
+        <option value="multiply">Multiply (*)</option>
+        <option value="division">Division (/)</option>
+        <option value="modulus">Modulus (%)</option>
+    </select>
+
+    <button onclick="getResult()"><b>Calculate</b></button>
+
+    <p id="result"></p>
+
+    <script>
+        function getResult() {
+            let numberA = parseFloat(document.getElementById("numA").value);
+            let numberB = parseFloat(document.getElementById("numB").value);
+            let operation = document.getElementById("operation").value;
+
+            let result = calculation(operation, numberA, numberB);
+
+            function calculation(opp, num1, num2) {
+                switch (opp) {
+                    case 'default':
+                        return "Please choose an operation !!"
+                    case 'add':
+                        return num1 + num2;
+                    case 'subtract':
+                        return num1 - num2;
+                    case 'multiply':
+                        return num1 * num2;
+                    case 'division':
+                        return num1 / num2;
+                    case 'modulus':
+                        return num1 % num2;
+                }
+            }
+
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+
+</html>
