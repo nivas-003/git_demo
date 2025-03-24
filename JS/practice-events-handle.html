@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:image/x-icon;base64," />
+    <title>Events Listner</title>
+
+    <style>
+        div {
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #outer {
+            background-color: green;
+        }
+
+        #inner {
+            background-color: yellow;
+        }
+
+        .divider {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Events Listner</h1>
+
+    <div id="outer">
+        <div id="inner">
+            <button id="btn">Click me</button>
+            <span class="divider"></span>
+            <a id="aLink" href="https://google.com" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+
+    <script>
+        document.addEventListener('click', function (event) {
+            console.log('event', event);
+
+            let eTarget = event.target;
+            console.log('eTarget', eTarget);
+
+            if (eTarget.matches('button')) {
+                console.log('button')
+            }
+        })
+    </script>
+</body>
+
+</html>
