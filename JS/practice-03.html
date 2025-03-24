@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:image/x-icon;base64," />
+    <title>practice-03</title>
+</head>
+
+<body>
+    <h1>Hello!</h1>
+
+    <script type="-">
+        function sum() {
+            let result = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                if (typeof arguments[i] == "number" && !isNaN(arguments[i])) {
+                    result += arguments[i]
+                }
+            }
+            return result
+        }
+
+        function sumOdd() {
+            let result = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                if (typeof arguments[i] === "number" && !isNaN(arguments[i]) && arguments[i] % 2 !== 0) {
+                    result += arguments[i]
+                }
+            }
+            return result
+        }
+
+        function sumEven() {
+            let result = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                if (typeof arguments[i] === "number" && !isNaN(arguments[i]) && arguments[i] % 2 == 0) {
+                    result += arguments[i]
+                }
+            }
+            return result
+        }
+    </script>
+
+    <script>
+        function sumWithCondition(conditionFn) {
+            let result = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                if (typeof arguments[i] === "number" && !isNaN(arguments[i]) && conditionFn(arguments[i])) {
+                    result += arguments[i];
+                }
+            }
+            return result;
+        }
+
+        function sum() {
+            return sumWithCondition(() => true);
+        }
+
+        function sumOdd() {
+            return sumWithCondition(num => num % 2 !== 0);
+        }
+
+        function sumEven() {
+            return sumWithCondition(num => num % 2 == 0);
+        }
+    </script>
+
+</body>
+
+</html>
